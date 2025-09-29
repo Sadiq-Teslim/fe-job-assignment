@@ -1,8 +1,13 @@
-// src/data/mockData.ts
+
+/**
+ * Data Models and Mock Data
+ * Defines TypeScript interfaces for authors, articles, staff picks, and users to follow.
+ * Provides mock data for use in development and UI prototyping.
+ */
 
 export interface Author {
   name: string;
-  avatarUrl: string; // Small icon for publication/author
+  avatarUrl: string;
 }
 
 export interface Article {
@@ -32,7 +37,6 @@ export interface UserToFollow {
   avatarUrl: string;
 }
 
-// News-style Unsplash images
 export const articles: Article[] = [
   {
     id: 1,

@@ -1,46 +1,44 @@
-// src/components/Header/Header.tsx
+/**
+ * Header Component
+ * Renders the top navigation bar with logo, hamburger menu, search, write button, and profile icon.
+ * Responsive: Hamburger and search icon shown on mobile, full search and write shown on desktop.
+ */
 import React from 'react';
 import {
-    HeaderContainer,
-    LeftSection,
-    LogoImage, // Import LogoImage instead of Logo
-    SearchWrapper,
-    SearchInput,
-    RightSection,
-    SearchIconMobile,
-    WriteLink,
-    WriteText,
-    ProfileIcon
+    HeaderContainer, LeftSection, HamburgerMenu, LogoImage, 
+    // SearchWrapper, SearchInput, 
+    RightSection, SearchIconMobile, WriteLink, WriteText, ProfileIcon
 } from './styles';
 import { BsSearch } from 'react-icons/bs';
 import { GoPencil } from 'react-icons/go';
+import { FiMenu } from 'react-icons/fi'; // Import the hamburger icon
 
+// Main header navigation bar
 const Header: React.FC = () => {
     return (
         <HeaderContainer>
             <LeftSection>
-                {/* 
-                  The path '/medium-logo.png' works because Vite serves 
-                  everything from the 'public' folder at the root level.
-                */}
+                {/* Hamburger menu for mobile navigation */}
+                <HamburgerMenu>
+                    <FiMenu size={24} />
+                </HamburgerMenu>
+                {/* Medium logo */}
                 <LogoImage src="/medium-logo.png" alt="Medium Logo" />
-                
-                <SearchWrapper>
-                    <BsSearch size={16} />
-                    <SearchInput type="text" placeholder="Search" />
-                </SearchWrapper>
             </LeftSection>
 
             <RightSection>
+                {/* Mobile search icon */}
                 <SearchIconMobile>
                     <BsSearch size={22} />
                 </SearchIconMobile>
 
+                {/* Write button (desktop only, hidden on mobile via CSS) */}
                 <WriteLink href="#">
                     <GoPencil size={24} />
                     <WriteText>Write</WriteText>
                 </WriteLink>
 
+                {/* User profile icon */}
                 <ProfileIcon />
             </RightSection>
         </HeaderContainer>

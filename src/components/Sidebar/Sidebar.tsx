@@ -20,7 +20,7 @@ import {
     FooterLinks
 } from './styles';
 import { staffPicks, topics, usersToFollow } from '../../data/mockData';
-import { BsBookmark } from 'react-icons/bs'; // Import the specific icon needed
+import { BsBookmark } from 'react-icons/bs';
 
 const Sidebar: React.FC = () => {
     const footerLinks = ['Help', 'Status', 'About', 'Careers', 'Press', 'Blog', 'Privacy', 'Terms', 'Text to speech'];

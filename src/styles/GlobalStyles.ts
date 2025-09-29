@@ -1,10 +1,8 @@
-// src/styles/GlobalStyles.ts
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
-    /* UPDATE THE FONT-FAMILY HERE */
     font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI',
       'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

@@ -1,4 +1,3 @@
-// src/components/Sidebar/styles.ts
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.aside`
@@ -8,7 +7,7 @@ export const SidebarContainer = styled.aside`
     display: block;
     padding-top: 1rem;
     position: sticky;
-    top: 57px; /* Height of header */
+    top: 57px;
     height: calc(100vh - 57px);
     overflow-y: auto;
   }
